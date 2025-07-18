@@ -1,0 +1,35 @@
+{
+  "automation_session": {
+    "name": "first2_test",
+    "duration": 18,
+    "os": "android",
+    "os_version": "13.0",
+    "browser_version": "app",
+    "browser": null,
+    "device": "Google Pixel 7",
+    "status": "done",
+    "hashed_id": "acf4f3eb814c3b567a92305743a2d219c80df37d",
+    "reason": "CLIENT_STOPPED_SESSION",
+    "build_name": "browserstack-build-2",
+    "project_name": "First2 Java Project",
+    "build_hashed_id": "40577bc40e3877bdb0480d8b2ecf93114acaca9a",
+    "logs": "https://app-automate.browserstack.com/builds/40577bc40e3877bdb0480d8b2ecf93114acaca9a/sessions/acf4f3eb814c3b567a92305743a2d219c80df37d/logs",
+    "browserstack_status": "done",
+    "created_at": "2025-07-18T10:39:21.000Z",
+    "browser_url": "https://app-automate.browserstack.com/builds/40577bc40e3877bdb0480d8b2ecf93114acaca9a/sessions/acf4f3eb814c3b567a92305743a2d219c80df37d",
+    "public_url": "https://app-automate.browserstack.com/builds/40577bc40e3877bdb0480d8b2ecf93114acaca9a/sessions/acf4f3eb814c3b567a92305743a2d219c80df37d?auth_token=6b2b2b470168632b79efcdfc90ded14ba6926a3892a596175404b1597630fb07",
+    "video_url": "https://app-automate.browserstack.com/sessions/acf4f3eb814c3b567a92305743a2d219c80df37d/video?token=UkF5OGl3eVZVTFFpSDBZS283YUxteUZJeEF4MTJ1ekUxTHVpMlpuZzQ1aWJtaUhrbVhjak1XaEo5V3crWXFqcjNIRENSTG5vYzhldzRGMFhqV05ud1E9PS0tS2grSEUzaiswNE9ORlZKaWYzT2wrUT09--30bb83d8e06c54053a0c3e2cf982b471807c05a9\u0026source=rest_api\u0026diff=484.733732974",
+    "appium_logs_url": "https://api.browserstack.com/app-automate/builds/40577bc40e3877bdb0480d8b2ecf93114acaca9a/sessions/acf4f3eb814c3b567a92305743a2d219c80df37d/appiumlogs",
+    "device_logs_url": "https://api.browserstack.com/app-automate/builds/40577bc40e3877bdb0480d8b2ecf93114acaca9a/sessions/acf4f3eb814c3b567a92305743a2d219c80df37d/devicelogs",
+    "app_details": {
+      "app_url": "bs://62052639d354aea7139864ba993d1cf6106ef4a3",
+      "app_name": "org.wikipedia.alpha",
+      "app_version": "2.5.194-alpha-2017-05-30",
+      "app_custom_id": null,
+      "uploaded_at": "2024-11-27T18:35:33.000Z",
+      "app_filename": "WikipediaSample.apk"
+    },
+    "session_terminal_logs_url": "https://app-automate.browserstack.com/s3-upload/bs-selenium-logs-use/s3.us-east-1/data/40577bc40e3877bdb0480d8b2ecf93114acaca9a/acf4f3eb814c3b567a92305743a2d219c80df37d-terminal-logs.txt?response-content-type=text%2Fplain\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIA2XUQHUQMIIBX5QJ6%2F20250718%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20250718T104743Z\u0026X-Amz-Expires=604800\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=96951db576860c31bdd9dff711b99a6d81d788d85200212b94e73fb7daa68ea8",
+    "build_terminal_logs_url": "https://app-automate.browserstack.com/s3-upload/bs-selenium-logs-use/s3.us-east-1/data/40577bc40e3877bdb0480d8b2ecf93114acaca9a/terminal-logs.txt?response-content-type=text%2Fplain\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIA2XUQHUQMIIBX5QJ6%2F20250718%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20250718T104743Z\u0026X-Amz-Expires=604800\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=327f6ae57e9fda6605ebcc9b9186372ef6da907af7d75f26f6ff6f1e4163e764"
+  }
+}
