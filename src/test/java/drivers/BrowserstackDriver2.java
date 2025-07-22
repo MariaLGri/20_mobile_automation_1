@@ -13,33 +13,42 @@ import javax.annotation.Nonnull;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+
 public class BrowserstackDriver2 implements WebDriverProvider {
     @Nonnull
     @Override
     public WebDriver createDriver(@Nonnull Capabilities capabilities) {
         MutableCapabilities caps = new MutableCapabilities();
 
-        // Set your access credentials
+        // Обязательные параметры авторизации
         caps.setCapability("browserstack.user", "panchmaria_ygdXiH");
         caps.setCapability("browserstack.key", "66sFgUe7JzauwdSYbky4");
 
+        // Основные параметры устройства
+        caps.setCapability("platformName", "Android");
+        caps.setCapability("deviceName", "Google Pixel 7");
+        caps.setCapability("platformVersion", "13.0");
+        caps.setCapability("automationName", "UiAutomator2");
 
-        // Set URL of the application under test
-        caps.setCapability("app", "bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c");
+        // URL тестируемого приложения
+        caps.setCapability("app", "bs://sample-app");
 
-        // Specify device and os_version for testing
-        caps.setCapability("device", "Google Pixel 3");
-        caps.setCapability("os_version", "9.0");
-
-        // Set other BrowserStack capabilities
+        // Дополнительные параметры BrowserStack
         caps.setCapability("project", "First Java Project");
         caps.setCapability("build", "browserstack-build-1");
         caps.setCapability("name", "first_test");
 
-        // Initialise the remote Webdriver using BrowserStack remote URL
-        // and desired capabilities defined above
+//        String browserstackUrl = String.format(
+//                "https://%s:%s@hub-cloud.browserstack.com/wd/hub",
+//                "panchmaria_ygdXiH",
+//                "66sFgUe7JzauwdSYbky4"
+//        );
+
         try {
-            return new AndroidDriver(
+            return new RemoteWebDriver(
                     new URL("https://hub.browserstack.com/wd/hub"), caps);
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);

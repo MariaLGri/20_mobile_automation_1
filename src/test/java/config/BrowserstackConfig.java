@@ -4,7 +4,7 @@ import org.aeonbits.owner.Config;
 
 @Config.Sources({
         "classpath:config/${env}.properties",
-        "classpath:config/remote.properties"
+        "classpath:config/browserstack.properties"
 })
 public interface BrowserstackConfig extends Config {
 

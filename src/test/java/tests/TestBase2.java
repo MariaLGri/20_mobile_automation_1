@@ -11,12 +11,21 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 
+import java.util.logging.Handler;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
 
 public class TestBase2 {
     @BeforeAll
     static void beforeAll() {
+        Logger logger = Logger.getLogger("");
+        logger.setLevel(Level.ALL);
+        for (Handler handler : logger.getHandlers()) {
+            handler.setLevel(Level.ALL);
+        }
         Configuration.browser = BrowserstackDriver2.class.getName();
         Configuration.browserSize = null;
         Configuration.timeout = 30000;
@@ -27,6 +36,7 @@ public class TestBase2 {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         open();
     }
+
 
     @AfterEach
     void addAttachments() {

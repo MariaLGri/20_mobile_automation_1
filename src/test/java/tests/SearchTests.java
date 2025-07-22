@@ -1,6 +1,9 @@
 package tests;
 
+import io.appium.java_client.android.AndroidDriver;
 import org.junit.jupiter.api.Test;
+
+import java.net.URL;
 
 import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
 
@@ -12,7 +15,8 @@ import static io.qameta.allure.Allure.step;
 
 
 
-public class SearchTests extends TestBase2 {
+public class SearchTests extends TestBase{
+
 
     @Test
     void successfulSearchTest() {
