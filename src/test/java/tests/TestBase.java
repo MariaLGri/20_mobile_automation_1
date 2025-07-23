@@ -11,15 +11,15 @@ import drivers.BrowserstackDriver;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+   import org.openqa.selenium.WebDriver;
 
-import static com.codeborne.selenide.Selenide.closeWebDriver;
+   import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
 
     public class TestBase {
+
         @BeforeAll
         static void beforeAll() {
-            System.out.println("BrowserStack user: " + System.getProperty("userName"));
-            System.out.println("BrowserStack key: " + System.getProperty("accessKey"));
             Configuration.browser = BrowserstackDriver.class.getName();
             Configuration.browserSize = null;
             Configuration.timeout = 30000;

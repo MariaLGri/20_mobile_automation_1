@@ -6,13 +6,13 @@ import org.aeonbits.owner.Config;
         "classpath:config/${env}.properties",
         "classpath:config/browserstack.properties"
 })
-public interface BrowserstackConfig extends Config {
+public interface BrowserStackConfig extends Config {
 
-    @Key("browserstack.user")
+    @Key("userName")
     @DefaultValue("${BROWSERSTACK_USERNAME}")
     String userName();
 
-    @Key("browserstack.key")
+    @Key("accessKey")
     @DefaultValue("${BROWSERSTACK_ACCESS_KEY}")
     String accessKey();
 

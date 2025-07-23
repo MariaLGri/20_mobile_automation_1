@@ -1,14 +1,12 @@
 package config;
 
-import lombok.Getter;
 import org.aeonbits.owner.ConfigFactory;
 
-@Getter
 public class ConfigProvider {
-    private static final BrowserstackConfig browserstackConfig =
-            ConfigFactory.create(BrowserstackConfig.class, System.getProperties());
+    private static final BrowserStackConfig browserStackConfig =
+            ConfigFactory.create(BrowserStackConfig.class, System.getProperties());
 
-    public static BrowserstackConfig getBrowserstackConfig() {
-        return browserstackConfig;
+    public static BrowserStackConfig getBrowserStackConfig() {
+        return browserStackConfig;
     }
 }

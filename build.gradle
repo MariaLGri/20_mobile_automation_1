@@ -9,12 +9,12 @@ repositories {
 }
 
 def allureVersion = "2.21.0",
-    selenideVersion = "6.15.0",
-    junitVersion = "5.9.0",
+    selenideVersion = "6.13.0",
+    junitVersion = "5.9.3",
     slf4jVersion = "2.0.7",
     ownerVersion = "1.0.12",
-    aspectjWeaverVersion = "1.9.22",
-    restAssuredVersion = "5.3.0"
+    restAssuredVersion = "5.3.0",
+    appiumVersion = "8.3.0"
 
 allure {
     report {
@@ -33,19 +33,14 @@ allure {
 
 dependencies {
     testImplementation(
-            "org.aspectj:aspectjweaver:$aspectjWeaverVersion",
             "com.codeborne:selenide:$selenideVersion",
             "io.qameta.allure:allure-selenide:$allureVersion",
-            "io.appium:java-client:8.5.1",
-            "org.aeonbits.owner:owner:$ownerVersion",
-            "io.rest-assured:rest-assured:$restAssuredVersion",
+            "io.appium:java-client:$appiumVersion",
             "org.junit.jupiter:junit-jupiter:$junitVersion",
-            "org.slf4j:slf4j-simple:$slf4jVersion"
+            "org.slf4j:slf4j-simple:$slf4jVersion",
+            "io.rest-assured:rest-assured:$restAssuredVersion",
+            "org.aeonbits.owner:owner:$ownerVersion"
     )
-}
-test {
-    systemProperties System.getProperties()
-    useJUnitPlatform()
 }
 tasks.withType(Test) {
     useJUnitPlatform()
