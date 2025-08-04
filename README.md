@@ -1,7 +1,7 @@
 
 <p align="center">
   <a href="https://reqres.in/" target="_blank" title="Официальный сайт" style="text-decoration: none;">
-    <img src="media/pictures/wikipedia.png" alt="HAR Logo" width="700" height="400" style="border: 0;">
+    <img src="media/pictures/wikipediya.png" alt="HAR Logo" width="900" height="300" style="border: 0;">
     <br>
     <span style="color: #0066cc; font-size: 1.25rem; font-weight: 600; margin-top: 8px; display: inline-block;">
          </span>
@@ -9,7 +9,7 @@
 </p>
 
 <div align="center">
-  <h2> ПРОЕКТ API АВТОМАТИЗАЦИИ | <img src="media/logo_main_api.PNG" width="20" alt=""> REQRES</h2>
+  <h2> ПРОЕКТ МОБИЛЬНОЙ АВТОМАТИЗАЦИИ | WikipediA</h2>
 </div>
 
 ---
