@@ -1,6 +1,6 @@
 
 <p align="center">
-  <a href="https://reqres.in/" target="_blank" title="Официальный сайт" style="text-decoration: none;">
+  <a href="https://ru.wikipedia.org/" target="_blank" title="Официальный сайт" style="text-decoration: none;">
     <img src="media/pictures/wikipediya.png" alt="HAR Logo" width="900" height="300" style="border: 0;">
     <br>
     <span style="color: #0066cc; font-size: 1.25rem; font-weight: 600; margin-top: 8px; display: inline-block;">
@@ -9,7 +9,7 @@
 </p>
 
 <div align="center">
-  <h2> ПРОЕКТ МОБИЛЬНОЙ АВТОМАТИЗАЦИИ | WikipediA</h2>
+  <h2> ПРОЕКТ МобильноЙ АВТОМАТИЗАЦИИ |<a href="https://ru.wikipedia.org/" target="_blank" title="Официальный сайт" style="text-decoration: none;"> WikipediA </a></h2>
 </div>
 
 ---
@@ -25,6 +25,7 @@
 - [Пример Allure-отчета](#пример-allure-отчета)
 - [Интеграция](#Интеграция)
 - [Уведомления в Telegram](#уведомления-в-telegram)
+- [Видео-отчет](#Видео-отчет)
 
 
 ---
