@@ -47,6 +47,7 @@
   <a href="https://rest-assured.io/" target="_blank"><img width="50px" title="RestAssured" src="media/icons/RestAssured.svg" alt="Jenkins"></a>
   <a href="https://docs.qameta.io/allure-testops/" target="_blank"><img width="50px" title="AllureTestOps" src="media/icons/AllureTestOps.svg" alt="Allure TestOps"></a>
   <a href="https://telegram.org/" target="_blank"><img width="50px" title="Telegram" src="media/icons/Telegram.png" alt="Telegram"></a>
+  <a href="https://www.browserstack.com/" target="_blank"><img width="50px" title="Browserstack" src="media/icons/Browserstack.svg" alt="Browserstack"></a>
 </p>
 
 <br>
