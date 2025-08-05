@@ -12,6 +12,7 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -30,13 +31,19 @@ public class TestBase {
         open();
     }
 
+
     @AfterEach
     void addAttachments() {
+        AndroidDriver driver = (AndroidDriver) WebDriverRunner.getWebDriver();
+
+        Attach.attachScreenshot(driver);
+        Attach.attachPageSource(driver);
+        Attach.attachLogs("Test finished on device: " +
+                driver.getCapabilities().getCapability("deviceName"));
+
         String sessionId = Selenide.sessionId().toString();
         System.out.println(sessionId);
-        Attach.pageSource();
+        Attach.attachVideoLink(sessionId);
         closeWebDriver();
-
-        Attach.addVideo();
     }
 }
