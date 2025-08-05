@@ -32,16 +32,11 @@ public class TestBase {
 
     @AfterEach
     void addAttachments() {
-        AndroidDriver driver = (AndroidDriver) WebDriverRunner.getWebDriver();
-
-        Attach.attachScreenshot(driver);
-        Attach.attachPageSource(driver);
-        Attach.attachLogs("Test finished on device: " +
-                driver.getCapabilities().getCapability("deviceName"));
-
         String sessionId = Selenide.sessionId().toString();
         System.out.println(sessionId);
-        Attach.attachVideoLink(sessionId);
+        Attach.pageSource();
         closeWebDriver();
+
+        Attach.addVideo();
     }
 }
