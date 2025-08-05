@@ -179,7 +179,7 @@ _Allure Report_ — это визуализированный отчёт о те
 
 <a id="Интеграция"></a>
 
-# <a href="https://allure.autotests.cloud/project/4774/dashboards" target="_blank"><img width="38" src="media/icons/AllureTestOps.svg" alt="Allure TestOps"> Интеграция с Allure TestOps</a>
+# <a href="https://allure.autotests.cloud/project/4861/dashboards" target="_blank"><img width="38" src="media/icons/AllureTestOps.svg" alt="Allure TestOps"> Интеграция с Allure TestOps</a>
 _Allure TestOps_ — это платформа для управления тестированием на базе Allure Report с расширенными возможностями.
 
 ### _Основные функции:_

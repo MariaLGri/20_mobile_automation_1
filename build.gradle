@@ -54,3 +54,6 @@ tasks.withType(Test) {
         }
     }
 }
+clean {
+    delete 'build/allure-results'
+}
