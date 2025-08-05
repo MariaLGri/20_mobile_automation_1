@@ -12,6 +12,8 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.openqa.selenium.WebDriver;
+
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -33,16 +35,19 @@ public class TestBase {
 
     @AfterEach
     void addAttachments() {
-        AndroidDriver driver = (AndroidDriver) WebDriverRunner.getWebDriver();
+        try {
+            AndroidDriver driver = (AndroidDriver) WebDriverRunner.getWebDriver();
+            Attach.attachScreenshot(driver);
+            Attach.attachPageSource(driver);
+            String deviceName = driver.getCapabilities().getCapability("deviceName").toString();
+            Attach.attachLogs("Тест выполнен на устройстве: " + deviceName);
+            String sessionId = Selenide.sessionId().toString();
+            Attach.attachVideoLink(sessionId);
 
-        Attach.attachScreenshot(driver);
-        Attach.attachPageSource(driver);
-        Attach.attachLogs("Test finished on device: " +
-                driver.getCapabilities().getCapability("deviceName"));
-
-        String sessionId = Selenide.sessionId().toString();
-        System.out.println(sessionId);
-        Attach.attachVideoLink(sessionId);
-        closeWebDriver();
+        } catch (Exception e) {
+            System.out.println("Не удалось добавить вложения: " + e.getMessage());
+        } finally {
+            closeWebDriver();
+        }
     }
 }
