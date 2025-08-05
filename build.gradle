@@ -39,7 +39,8 @@ dependencies {
             "org.junit.jupiter:junit-jupiter:$junitVersion",
             "org.slf4j:slf4j-simple:$slf4jVersion",
             "io.rest-assured:rest-assured:$restAssuredVersion",
-            "org.aeonbits.owner:owner:$ownerVersion"
+            "org.aeonbits.owner:owner:$ownerVersion",
+            'org.assertj:assertj-core:3.24.2'
     )
 }
 tasks.withType(Test) {
