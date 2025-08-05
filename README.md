@@ -89,7 +89,7 @@
 <a id="сборка-в-jenkins"></a>
 <p align="center"> 
 
-# <a href="https://jenkins.autotests.cloud/job/035_Api_final_project_GrishinaML/" target="_blank"><img width="40px" style="vertical-align:middle" src="media/pictures/Jenkins_logo.png" alt="Jenkins Logo"> Сборка в Jenkins
+# <a href="https://jenkins.autotests.cloud/job/035_mobile_automation_1/" target="_blank"><img width="40px" style="vertical-align:middle" src="media/pictures/Jenkins_logo.png" alt="Jenkins Logo"> Сборка в Jenkins
 
 </p>
 
@@ -154,14 +154,14 @@ _Allure Report_ — это визуализированный отчёт о те
 ### 🔍 Обзор
 
 <p align="center">
-  <a href="https://jenkins.autotests.cloud/job/035_Api_final_project_GrishinaML/8/allure/" target="_blank" rel="noopener noreferrer">
+  <a href="https://jenkins.autotests.cloud/job/035_mobile_automation_1/4/allure/" target="_blank" rel="noopener noreferrer">
     <img src="media/pictures/allyreMobile1.PNG" alt="Allure Overview Dashboard" style="border: 1px solid #ddd; border-radius: 4px; padding: 5px;">
   </a>
 </p>
 
 ### 📂 Группы тестов
 <p align="center">
-  <a href="https://jenkins.autotests.cloud/job/035_Api_final_project_GrishinaML/8/allure/#suites" target="_blank" rel="noopener noreferrer">
+  <a href="https://jenkins.autotests.cloud/job/035_mobile_automation_1/4/allure/#suites" target="_blank" rel="noopener noreferrer">
     <img src="media/pictures/allyremobile2.PNG" alt="Allure Test Suites" style="border: 1px solid #ddd; border-radius: 4px; padding: 5px; margin-top: 20px;">
   </a>
 </p>
@@ -169,7 +169,7 @@ _Allure Report_ — это визуализированный отчёт о те
 ### 📈 Анализ тестов
 
 <p align="center">
-  <a href="https://jenkins.autotests.cloud/job/035_Api_final_project_GrishinaML/8/allure/#graph" target="_blank" rel="noopener noreferrer">
+  <a href="https://jenkins.autotests.cloud/job/035_mobile_automation_1/4/allure/#graph" target="_blank" rel="noopener noreferrer">
     <img src="media/pictures/allyreMobile3.PNG" alt="Allure Analytics Graph" style="border: 1px solid #ddd; border-radius: 4px; padding: 5px; margin-top: 20px;">
   </a>
 </p>
