@@ -25,7 +25,7 @@
 - [Пример Allure-отчета](#пример-allure-отчета)
 - [Интеграция](#Интеграция)
 - [Уведомления в Telegram](#уведомления-в-telegram)
-- [Видео-отчет](#Видео-отчет)
+- [Видео пример запуска тестов](#видео-примера-запуска-тестов)
 
 
 ---
@@ -64,7 +64,7 @@
 
 - ✔️ **Проверка поиска статей в приложении wikipedia**
 - ✔️ **Открытие найденной статьи**
-- ✔️ ****
+- ✔️ **Проверка кнопки возврата 'Назад' и закрытия приложения**
 
 
 <br>
@@ -110,7 +110,7 @@ _Работает с любыми языками, гибко настраива�
 Для запуска сборки необходимо перейти в раздел <code> Build with Parameters:</code> и нажать кнопку <code>Build</code>.
 <p align="center">
 
-<img title="Jenkins Build" src="media/pictures/buildAPI.PNG">
+<img title="Jenkins Build" src="media/pictures/jenkinsBuild.PNG">
 </p>
 
 После выполнения сборки, в блоке <code>История сборок</code> напротив номера сборки появятся значки <code>Allure
@@ -144,6 +144,7 @@ _Allure Report_ — это визуализированный отчёт о те
 
 * Шаги теста;
 * Логи браузерной консоли;
+* Логи браузерной консоли;
 
 
 <br>
@@ -152,14 +153,14 @@ _Allure Report_ — это визуализированный отчёт о те
 
 <p align="center">
   <a href="https://jenkins.autotests.cloud/job/035_Api_final_project_GrishinaML/8/allure/" target="_blank" rel="noopener noreferrer">
-    <img src="media/pictures/allure0.PNG" alt="Allure Overview Dashboard" style="border: 1px solid #ddd; border-radius: 4px; padding: 5px;">
+    <img src="media/pictures/allyreMobile1.PNG" alt="Allure Overview Dashboard" style="border: 1px solid #ddd; border-radius: 4px; padding: 5px;">
   </a>
 </p>
 
 ### 📂 Группы тестов
 <p align="center">
   <a href="https://jenkins.autotests.cloud/job/035_Api_final_project_GrishinaML/8/allure/#suites" target="_blank" rel="noopener noreferrer">
-    <img src="media/pictures/allure1.PNG" alt="Allure Test Suites" style="border: 1px solid #ddd; border-radius: 4px; padding: 5px; margin-top: 20px;">
+    <img src="media/pictures/allyremobile2.PNG" alt="Allure Test Suites" style="border: 1px solid #ddd; border-radius: 4px; padding: 5px; margin-top: 20px;">
   </a>
 </p>
 
@@ -167,7 +168,7 @@ _Allure Report_ — это визуализированный отчёт о те
 
 <p align="center">
   <a href="https://jenkins.autotests.cloud/job/035_Api_final_project_GrishinaML/8/allure/#graph" target="_blank" rel="noopener noreferrer">
-    <img src="media/pictures/allure2.PNG" alt="Allure Analytics Graph" style="border: 1px solid #ddd; border-radius: 4px; padding: 5px; margin-top: 20px;">
+    <img src="media/pictures/allyreMobile3.PNG" alt="Allure Analytics Graph" style="border: 1px solid #ddd; border-radius: 4px; padding: 5px; margin-top: 20px;">
   </a>
 </p>
 
@@ -209,8 +210,17 @@ _Allure TestOps_ — это платформа для управления те�
 <br>
 
 ---
+<a id="видео-пример-запуска-тестов"></a>
 
+# <img width="38" style="vertical-align:middle" title="Selenoid" src="media/icons/Selenoid.png"> Видео примера запуска тестов в Selenoid
 
+В отчетах Allure для каждого теста прикреплен не только скриншот, но и видео прохождения теста
+
+<br>
+
+<p align="center">
+  <img src="media/Video/videoMobile.gif" alt="Demo" width="800">
+</p>
 
    </td>
   </tr>
