@@ -1,0 +1,6 @@
+7765936827:AAHDbEQ7mSz4cDsuqQxiMT7PFgpgz-iWWD0
+
+https://api.telegram.org/bot7765936827:AAHDbEQ7mSz4cDsuqQxiMT7PFgpgz-iWWD0/getUpdates
+
+-1002573855936
+curl -X POST -H 'Content-Type: application/json' -d '{"chat_id": "-1002573855936", "text": "This is a test from привет", "disable_notification": true}' https://api.telegram.org/bot7765936827:AAHDbEQ7mSz4cDsuqQxiMT7PFgpgz-iWWD0/getUpdates/sendMessage
