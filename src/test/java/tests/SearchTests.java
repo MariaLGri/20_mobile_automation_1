@@ -7,8 +7,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pages.SearchMainPage;
 import pages.SearchPage1;
-
-
 import static io.qameta.allure.Allure.step;
 
 
