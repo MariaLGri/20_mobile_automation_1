@@ -34,6 +34,7 @@ dependencies {
             'com.codeborne:selenide:6.19.1',
             "io.qameta.allure:allure-junit5:$allureVersion",
             "org.assertj:assertj-core:3.24.2",
+            'io.qameta.allure:allure-selenide:2.24.0',
             "com.github.javafaker:javafaker:1.0.2",
             "org.aeonbits.owner:owner:1.0.12"
     )
