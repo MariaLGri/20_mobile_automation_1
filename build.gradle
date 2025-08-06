@@ -1,54 +1,71 @@
 plugins {
     id 'java-library'
-    id('io.qameta.allure') version '2.12.0'
-    id "io.freefair.lombok" version "6.0.0-m2"
+    id 'io.qameta.allure' version '2.12.0'
+    id 'io.freefair.lombok' version '6.6.3'
 }
 
 def allureVersion = "2.21.0",
     junitVersion = "5.9.3",
-    slf4jVersion = "2.0.7"
+    slf4jVersion = "2.0.7",
+    appiumVersion = "8.3.0"
 
 allure {
-    report {
-        version.set(allureVersion)
-    }
-    adapter { // отвечает за появление папочки build/allure-results
-        aspectjWeaver.set(true) //обработка аннотации @Step
+    version = allureVersion
+    adapter {
         frameworks {
-            junit5 { //название фреймворка
-                adapterVersion.set("2.21.0") //версия интеграции фреймворка и Allure
+            junit5 {
+                adapterVersion = allureVersion
+                aspectjWeaver = true
             }
         }
     }
 }
-
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
+    // Основные зависимости
     testImplementation(
-            "io.appium:java-client:8.3.0",
+            "io.appium:java-client:$appiumVersion",
             "org.junit.jupiter:junit-jupiter:$junitVersion",
-            "io.qameta.allure:allure-junit5:$allureVersion",
             "org.slf4j:slf4j-simple:$slf4jVersion",
-            "io.appium:java-client:8.3.0",
-            "org.assertj:assertj-core:3.24.2",          // Assertions
-            "com.github.javafaker:javafaker:1.0.2",     // Генерация тестовых данных
-            "org.aeonbits.owner:owner:1.0.12"           // Управление конфигами
+
+            // Allure
+            "io.qameta.allure:allure-junit5:$allureVersion",
+
+            // Утилиты
+            "org.assertj:assertj-core:3.24.2",
+            "com.github.javafaker:javafaker:1.0.2",
+            "org.aeonbits.owner:owner:1.0.12"
     )
-}
 
-tasks.withType(Test) {
-    useJUnitPlatform()
-    systemProperties(System.getProperties())
-
-    testLogging {
-        lifecycle {
-            events "started", "skipped", "failed", "standard_error", "standard_out"
-            exceptionFormat "short"
-        }
+    // Для работы с BrowserStack (если нужно)
+    testImplementation("io.rest-assured:rest-assured:5.3.0") {
+        exclude group: 'org.codehaus.groovy'  // Избегаем конфликтов версий
     }
 }
 
+test {
+    useJUnitPlatform()
+    systemProperties(System.getProperties())
+
+    // Настройки для Allure
+    systemProperty 'allure.results.directory', 'build/allure-results'
+
+    testLogging {
+        events "passed", "skipped", "failed", "standardOut", "standardError"
+        showExceptions true
+        exceptionFormat "full"
+        showCauses true
+        showStackTraces true
+    }
+
+    // Очистка результатов перед запуском
+    doFirst {
+        delete 'build/allure-results'
+    }
+
+    finalizedBy 'allureReport'
+}
