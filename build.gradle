@@ -1,43 +1,45 @@
 plugins {
     id 'java-library'
-    id'io.qameta.allure' version '2.12.0'
+    id('io.qameta.allure') version '2.12.0'
+    id "io.freefair.lombok" version "6.0.0-m2"
 }
 
-def restAssuredVersion = "5.3.1",
-    allureVersion = "2.21.0",
-    selenideVersion = "6.13.0",
-    junitVersion = "5.9.0",
-    slf4jVersion = "2.0.7",
-    ownerVersion = "1.0.12",
-    appiumVersion = "8.3.0"
+def allureVersion = "2.21.0",
+    junitVersion = "5.9.3",
+    slf4jVersion = "2.0.7"
 
 allure {
     report {
         version.set(allureVersion)
     }
-    adapter {
-        aspectjWeaver.set(true)
+    adapter { // отвечает за появление папочки build/allure-results
+        aspectjWeaver.set(true) //обработка аннотации @Step
         frameworks {
-            junit5 {
-                adapterVersion.set(allureVersion)
+            junit5 { //название фреймворка
+                adapterVersion.set("2.21.0") //версия интеграции фреймворка и Allure
             }
         }
     }
 }
 
 
+repositories {
+    mavenCentral()
+}
+
 dependencies {
     testImplementation(
-            "com.codeborne:selenide:$selenideVersion",
-            "io.qameta.allure:allure-selenide:$allureVersion",
-            "io.appium:java-client:$appiumVersion",
+            "io.appium:java-client:8.3.0",
             "org.junit.jupiter:junit-jupiter:$junitVersion",
+            "io.qameta.allure:allure-junit5:$allureVersion",
             "org.slf4j:slf4j-simple:$slf4jVersion",
-            "io.rest-assured:rest-assured:$restAssuredVersion",
-            "org.aeonbits.owner:owner:$ownerVersion",
-            'org.assertj:assertj-core:3.24.2'
+            "io.appium:java-client:8.3.0",
+            "org.assertj:assertj-core:3.24.2",          // Assertions
+            "com.github.javafaker:javafaker:1.0.2",     // Генерация тестовых данных
+            "org.aeonbits.owner:owner:1.0.12"           // Управление конфигами
     )
 }
+
 tasks.withType(Test) {
     useJUnitPlatform()
     systemProperties(System.getProperties())
@@ -49,3 +51,4 @@ tasks.withType(Test) {
         }
     }
 }
+
