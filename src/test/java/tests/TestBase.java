@@ -44,6 +44,7 @@ public class TestBase {
 
     @BeforeEach
     void beforeEach() {
+        Configuration.browser = EmulatorDriver.class.getName();
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         open();
     }
