@@ -5,6 +5,7 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import config.Environment;
 import drivers.BrowserstackDriver;
 import drivers.EmulatorDriver;
 import helpers.Attach;
@@ -17,25 +18,29 @@ import org.junit.jupiter.api.BeforeEach;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
-import static config.Environment.BROWSERSTACK;
-import static config.Environment.EMULATOR;
 
 public class TestBase {
-    private static final String env = System.getProperty("env", "emulator");
+    protected String searchQuery = "Appium";
+    private static final Environment env = Environment.valueOf(
+            System.getProperty("env", "EMULATOR").toUpperCase()
+    );
 
     @BeforeAll
     static void beforeAll() {
-
-        if (env.equals(BROWSERSTACK.getDisplayName())) {
-            Configuration.browser = BrowserstackDriver.class.getName();
-        } else if (env.equals(EMULATOR.getDisplayName())) {
-            Configuration.browser = EmulatorDriver.class.getName();
-        } else {
-            throw new IllegalArgumentException("Unsupported env: " + env);
+        switch (env) {
+            case BROWSERSTACK:
+                Configuration.browser = BrowserstackDriver.class.getName();
+                break;
+            case EMULATOR:
+                Configuration.browser = EmulatorDriver.class.getName();
+                break;
+            default:
+                throw new IllegalArgumentException("Unsupported env: " + env);
         }
         Configuration.browserSize = null;
         Configuration.timeout = 30000;
     }
+
 
     @BeforeEach
     void beforeEach() {
